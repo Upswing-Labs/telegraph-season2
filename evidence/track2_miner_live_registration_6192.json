@@ -1,0 +1,122 @@
+{
+  "recorded_at_utc": "2026-11-24T23:52:00Z",
+  "network": "ethereum-sepolia",
+  "registration_id": 6192,
+  "yaml_miner_id": 880401,
+  "slug": "upswing-solsignal-liquidity",
+  "sepolia_tx_hash": "0x965ec32db3dbe1785561ebf2c35c97a4b2a6b165dac833a90f03358819ce0e80",
+  "sepolia_block": 12205829,
+  "etherscan_url": "https://sepolia.etherscan.io/tx/0x965ec32db3dbe1785561ebf2c35c97a4b2a6b165dac833a90f03358819ce0e80",
+  "fee_address": "0x2a26fc568F2bf09553004e652fEC733878095216",
+  "yaml_url": "https://upswing-solsignal-miner.upswing-labs.workers.dev/miner.yaml",
+  "yaml_sha256": "0x17c7bd0cc7951ee77eb2514730183349deba433160252d008632d957e1c6f67b",
+  "devnode_readback_status": 200,
+  "devnode_miner_record": {
+    "miner": {
+      "registration_id": 6192,
+      "slug": "upswing-solsignal-liquidity",
+      "miner_address": "0x2a26fc568f2bf09553004e652fec733878095216",
+      "activation_status": "active",
+      "yaml_url": "https://upswing-solsignal-miner.upswing-labs.workers.dev/miner.yaml",
+      "yaml_hash": "17c7bd0cc7951ee77eb2514730183349deba433160252d008632d957e1c6f67b",
+      "supported_intents": [
+        "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+        "FRAUD_RISK_GENERAL",
+        "CRYPTO_PRICE_USD"
+      ],
+      "fee_address": "0x2a26fc568f2bf09553004e652fec733878095216",
+      "min_price_usdc": 10000,
+      "rejection_reason": null,
+      "fetch_attempts": 0,
+      "retrying": false,
+      "registered_at": "2026-11-24T23:48:51Z",
+      "updated_at": "2026-11-24T23:48:51Z"
+    }
+  },
+  "live_paid_ask_crypto_price": {
+    "880401": {
+      "status": 200,
+      "response": {
+        "result": {
+          "miner_id": "880401",
+          "miner_name": "Upswing SolSignal Multi-Chain Liquidity & Risk Oracle",
+          "endpoint": "/v1/crypto-price",
+          "result": {
+            "price_usd": 59703.6
+          },
+          "result_shape": "intent",
+          "format_version": 1,
+          "field_status": {
+            "price_usd": "ok"
+          },
+          "input": {
+            "symbol": "BTC"
+          },
+          "input_schema_version": 3,
+          "cost_usd": 0.01,
+          "duration_ms": 799,
+          "timestamp": "2026-11-24T23:51:31.661090255Z",
+          "reasoning": "Intent: miner upswing-solsignal-liquidity given by the caller\nMiner: The user is asking for the price of a cryptocurrency (BTC), and the intent has been classified as CRYPTO_PRICE_USD. The '/v1/crypto-price' endpoint is described as serving the CRYPTO_PRICE_USD intent and requires a 'symbol' parameter, which is provided in the user's request.",
+          "intent": "CRYPTO_PRICE_USD",
+          "intent_version": 1,
+          "signal_hash": "0x6234067204237058af0ceabe6c3ea23b1e0100b7e3022ae4c3fd47b5fa1cd609"
+        },
+        "receipt": {
+          "receipt_hash": "0x95c96f17c6fbe0454007139ea9e7ef4c00ffc195e019c4faf31c997b22ea0956",
+          "rail": "escrow",
+          "payer": "0x8d1d06f67f1fc356ac566052777139e8e3a4b592",
+          "miner": "6192",
+          "intent": "CRYPTO_PRICE_USD",
+          "amount_uusdc": "10000",
+          "epoch_id": 52,
+          "settlement": "epoch",
+          "chain": "telegraph",
+          "timestamp": 1795564291
+        }
+      }
+    }
+  },
+  "live_paid_ask_liquidity_depth": {
+    "miner_id_used": "880401",
+    "status": 200,
+    "response": {
+      "result": {
+        "miner_id": "880401",
+        "miner_name": "Upswing SolSignal Multi-Chain Liquidity & Risk Oracle",
+        "endpoint": "/v1/liquidity",
+        "result": {
+          "liquidity_usd": 14265000.29
+        },
+        "result_shape": "intent",
+        "format_version": 3,
+        "field_status": {
+          "liquidity_usd": "ok"
+        },
+        "input": {
+          "pool": "58oQChx4yWmvKdwLLZzBi4ChoCc2fqCUWBkwMihLYQo2",
+          "chain": "solana"
+        },
+        "input_schema_version": 3,
+        "cost_usd": 0.01,
+        "duration_ms": 706,
+        "timestamp": "2026-11-24T23:51:35.526950538Z",
+        "reasoning": "Intent: miner upswing-solsignal-liquidity given by the caller\nMiner: The user is asking to verify liquidity depth for a specific pool on a specific chain. The '/v1/liquidity' endpoint is described as \"Verify exact DEX pool or token liquidity in USD on a specific chain\" and explicitly lists 'LIQUIDITY_DEPTH_VERIFY_GENERAL' as one of its intents. The provided parameters 'pool' and 'chain' directly map to the required parameters for this endpoint.",
+        "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+        "intent_version": 2,
+        "signal_hash": "0xbef6728d1f830ffe95afa056710186ad60448c042c44edf9aba592155d89c17d"
+      },
+      "receipt": {
+        "receipt_hash": "0x5522d9269c8bde9d4886edd7255664d8129e03a89b62a01c3dc13fa8144b4c59",
+        "rail": "escrow",
+        "payer": "0x8d1d06f67f1fc356ac566052777139e8e3a4b592",
+        "miner": "6192",
+        "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+        "amount_uusdc": "10000",
+        "epoch_id": 52,
+        "settlement": "epoch",
+        "chain": "telegraph",
+        "timestamp": 1795564295
+      }
+    }
+  }
+}
