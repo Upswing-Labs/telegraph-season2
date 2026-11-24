@@ -1,0 +1,177 @@
+{
+  "recorded_at_utc": "2026-11-23T23:25:13Z",
+  "network": "telegraph-sepolia-devnode",
+  "node_url": "https://devnode.telegraphprotocol.com",
+  "submitter": "0x2156F6c50ab1dcC206F22f914A92C2A978E5E88c",
+  "total_rows_admitted": 242,
+  "readback_url": "https://devnode.telegraphprotocol.com/api/evalpool/submissions/mine?submitter=0x2156F6c50ab1dcC206F22f914A92C2A978E5E88c",
+  "uploads": [
+    {
+      "intentId": "LIVE_PORT_CONGESTION_GENERAL",
+      "rows": 60,
+      "ok": true,
+      "status": 200,
+      "body_sha256": "d880774ebb74e7e6f6d3fc1f4e23821e2f504885a879b0c30c69f1bef1016fcc",
+      "response": {
+        "intent_id": "LIVE_PORT_CONGESTION_GENERAL",
+        "submitter": "0x2156f6c50ab1dcc206f22f914a92c2a978e5e88c",
+        "signed": true,
+        "received": 60,
+        "accepted": 60,
+        "duplicate": 0,
+        "rejected": 0,
+        "curated": 60,
+        "state_counts": {
+          "admitted": 60
+        }
+      }
+    },
+    {
+      "intentId": "VESSEL_TELEMETRY_VERIFY_GENERAL",
+      "rows": 60,
+      "ok": true,
+      "status": 200,
+      "body_sha256": "fbfc2c3ecfb5396aeb97cf9065ce97477bbf05bbaece1bd4db205911438911eb",
+      "response": {
+        "intent_id": "VESSEL_TELEMETRY_VERIFY_GENERAL",
+        "submitter": "0x2156f6c50ab1dcc206f22f914a92c2a978e5e88c",
+        "signed": true,
+        "received": 60,
+        "accepted": 60,
+        "duplicate": 0,
+        "rejected": 0,
+        "curated": 60,
+        "state_counts": {
+          "admitted": 60,
+          "eligible": 1
+        }
+      }
+    },
+    {
+      "intentId": "FRAUD_RISK_GENERAL",
+      "rows": 60,
+      "ok": true,
+      "status": 200,
+      "body_sha256": "96c356684bb4d1501875a8675af23f0e849911d0c77a6d9ded4125e1cab5290b",
+      "response": {
+        "intent_id": "FRAUD_RISK_GENERAL",
+        "submitter": "0x2156f6c50ab1dcc206f22f914a92c2a978e5e88c",
+        "signed": true,
+        "received": 60,
+        "accepted": 60,
+        "duplicate": 0,
+        "rejected": 0,
+        "curated": 60,
+        "state_counts": {
+          "admitted": 60,
+          "eligible": 72,
+          "superseded": 1
+        }
+      }
+    },
+    {
+      "intentId": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+      "rows": 60,
+      "ok": true,
+      "status": 200,
+      "body_sha256": "eae9b2e527bfaca421f751b575cfea8d89402b502905914ff82d4e2947428f69",
+      "response": {
+        "intent_id": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+        "submitter": "0x2156f6c50ab1dcc206f22f914a92c2a978e5e88c",
+        "signed": true,
+        "received": 60,
+        "accepted": 60,
+        "duplicate": 0,
+        "rejected": 0,
+        "curated": 60,
+        "state_counts": {
+          "admitted": 60,
+          "eligible": 467,
+          "rejected": 58
+        }
+      }
+    },
+    {
+      "intentId": "CRYPTO_PRICE_USD",
+      "rows": 2,
+      "ok": true,
+      "status": 200,
+      "body_sha256": "e241624137d2c05fab784d2e5fb6d450df427817b84e080f0cf504782664b68d",
+      "response": {
+        "intent_id": "CRYPTO_PRICE_USD",
+        "submitter": "0x2156f6c50ab1dcc206f22f914a92c2a978e5e88c",
+        "signed": true,
+        "received": 2,
+        "accepted": 2,
+        "duplicate": 0,
+        "rejected": 0,
+        "curated": 2,
+        "state_counts": {
+          "admitted": 2,
+          "eligible": 99,
+          "rejected": 1,
+          "superseded": 1
+        }
+      }
+    }
+  ],
+  "mine_breakdown": {
+    "CRYPTO_PRICE_USD|admitted|unverified": 2,
+    "LIQUIDITY_DEPTH_VERIFY_GENERAL|admitted|attested": 60,
+    "FRAUD_RISK_GENERAL|admitted|attested": 60,
+    "VESSEL_TELEMETRY_VERIFY_GENERAL|admitted|attested": 60,
+    "LIVE_PORT_CONGESTION_GENERAL|admitted|attested": 60
+  },
+  "sample_rows": [
+    {
+      "intent_id": "CRYPTO_PRICE_USD",
+      "row_hash": "22b5b8c00d2b5ad3a3f4cf660929923e7cc514e4367dc6b6103910f6e98dc0ee",
+      "case_id": "4b1518eb07ddb7c6308ef816e717845c0962edbfb37862ce0ab1ccb94923a3bb",
+      "status": "admitted",
+      "provenance_class": "unverified",
+      "quality_rules_version": "evalpool-quality-v1",
+      "created_at": "2026-11-23T23:25:18.990323Z",
+      "updated_at": "2026-11-23T23:25:18.9922Z"
+    },
+    {
+      "intent_id": "CRYPTO_PRICE_USD",
+      "row_hash": "771fb2c31b86ab1473a86da18aec84fd2ece47053380574caf2f51c7b5308641",
+      "case_id": "8eb2b537dd21f52aba100d6e96b1193d177ae3aa420f2c4edc281eb38788608c",
+      "status": "admitted",
+      "provenance_class": "unverified",
+      "quality_rules_version": "evalpool-quality-v1",
+      "created_at": "2026-11-23T23:25:18.988498Z",
+      "updated_at": "2026-11-23T23:25:18.9922Z"
+    },
+    {
+      "intent_id": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+      "row_hash": "9747c31de04fbbe217f76f94094f6a64dcbbdb1b17ed8fd59ae0d4776f3f1291",
+      "case_id": "300088ec191f82f2e5c9a2fd4d734418f3c4fdc8de1b6bc53c4fe0869697a2c4",
+      "status": "admitted",
+      "provenance_class": "attested",
+      "quality_rules_version": "evalpool-quality-v1",
+      "created_at": "2026-11-23T23:25:18.22516Z",
+      "updated_at": "2026-11-23T23:25:18.227238Z"
+    },
+    {
+      "intent_id": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+      "row_hash": "2211caad857027f2fc80aabd27c18905020da881847c9cdd6f396cabf9e81e65",
+      "case_id": "0d6b667562f3f72e5980dbf1febc77ff064965c5e7fc9b83581e83aa39023a57",
+      "status": "admitted",
+      "provenance_class": "attested",
+      "quality_rules_version": "evalpool-quality-v1",
+      "created_at": "2026-11-23T23:25:18.223522Z",
+      "updated_at": "2026-11-23T23:25:18.227238Z"
+    },
+    {
+      "intent_id": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+      "row_hash": "bca1a4c81f69441c23b234271df1e2d73265c9ac7a605d7685ac26a8bfee83a5",
+      "case_id": "22fca2c9aac23a7f7851daa8fb11969f3cdbc04d6f0e6116eef874368d5a83ba",
+      "status": "admitted",
+      "provenance_class": "attested",
+      "quality_rules_version": "evalpool-quality-v1",
+      "created_at": "2026-11-23T23:25:18.221782Z",
+      "updated_at": "2026-11-23T23:25:18.227238Z"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "upswing-telegraph-season2",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Upswing Labs — Telegraph Protocol Season II 3-Track Suite: Track 01 FactGap (Mission 05 Conflict Intelligence), Track 02 Upswing SolSignal Miner (LIQUIDITY_DEPTH_VERIFY / FRAUD_RISK / CRYPTO_PRICE), Track 03 EvalForge (Attested Datasets + V2 lora-v1 Adapter & Executor)",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "test": "node --test tests/shared_crypto.test.mjs tests/track1_factgap.test.mjs tests/track2_miner.test.mjs tests/track3_evaluator.test.mjs",
+    "test:live": "TELEGRAPH_LIVE_TESTS=1 node --test tests/live_integration.test.mjs",
+    "app:web": "node track1_factgap_app/server.mjs",
+    "app:cli": "node track1_factgap_app/cli.mjs",
+    "miner:serve": "node track2_solsignal_miner/server.mjs",
+    "miner:validate": "node track2_solsignal_miner/yaml_validator.mjs track2_solsignal_miner/miner.yaml",
+    "eval:build": "node track3_evalforge/build_datasets.mjs",
+    "eval:gate": "node track3_evalforge/dataset_gate.mjs --all",
+    "eval:executor": "node track3_evalforge/runnable_executor.mjs",
+    "eval:submit": "node track3_evalforge/evalpool_submit.mjs"
+  }
+}

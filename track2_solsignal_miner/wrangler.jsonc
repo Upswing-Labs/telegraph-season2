@@ -1,0 +1,27 @@
+{
+  // Track 02 — Upswing SolSignal Telegraph Miner ($0 Cloudflare Workers Free Tier)
+  // Zero private keys or edge secrets — pure read-only oracle endpoints + verbatim /miner.yaml
+  "name": "upswing-solsignal-miner",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-11-23",
+  "services": [
+    {
+      "binding": "SOLSIGNAL",
+      "service": "upswing-solsignal"
+    }
+  ],
+  "rules": [
+    {
+      "type": "Text",
+      "globs": ["**/*.yaml"],
+      "fallthrough": true
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    }
+  }
+}

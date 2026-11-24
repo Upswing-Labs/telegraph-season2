@@ -1,0 +1,282 @@
+{
+  "product": "upswing-factgap",
+  "mission": "Mission 05 — Conflict Intelligence (Routes 2 & 3)",
+  "dossier_id": "black-sea-grain",
+  "title": "Black Sea Grain Corridor — Reported vs. Observed Throughput Audit",
+  "route": "Route 2 (Reported-vs-Observed) + Route 3 (Research Priced per Fact)",
+  "customer": "Commodities & Systematic Macro Risk Desk",
+  "network_mode": "api_key",
+  "simulated": false,
+  "generated_at": "2026-11-24T00:21:26.587Z",
+  "started_at": "2026-11-24T00:20:32.121Z",
+  "total_duration_ms": 54466,
+  "action_mode": "DRAFT_ONLY_NO_EXTERNAL_SIDE_EFFECT",
+  "epistemic_framing": "Provenance & confidence audit only: reports what purchased Telegraph inputs observed and where they contradict reported claims. Never asserts a definitive verdict on a live conflict.",
+  "reported_claim": {
+    "summary": "Official port bulletin states Constanta grain export corridor is operating with low congestion (<12h wait), normal dry weather, and zero sanctioned counterparties involved.",
+    "expected_congestion_max_hours": 12,
+    "expected_sanctions_matched": false,
+    "expected_precip_max_mm": 5,
+    "reported_unemployment_pct": 5.4
+  },
+  "summary": {
+    "provenance_status": "MODERATE_DISCREPANCY_REVIEW_REQUIRED",
+    "discrepancy_score": 40,
+    "evidence_completeness_pct": 80,
+    "planned_checks": 5,
+    "executed_checks": 5,
+    "verified_checks": 4,
+    "contradiction_count": 1,
+    "halted_reason": null
+  },
+  "contradictions": [
+    {
+      "check_id": "sanctions_counterparty",
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "type": "SANCTIONS_HIT_DISCREPANCY",
+      "severity": "CRITICAL",
+      "reported": "No sanctioned counterparty",
+      "observed": "MATCHED (OFAC SDN list) — OPEN JOINT-STOCK COMPANY ROSNEFT OIL COMPANY",
+      "detail": "Counterparty \"Rosneft Oil Company\" matched official sanctions list(s), contradicting clean attestation.",
+      "receipt_hash": "0xd51c8790c633bb66f920c213dea3641533e77a89fc667c2d1953e429b3e72b87",
+      "signal_hash": "0x82048e300190b81b10e49e940d57d6fe2f81329d987162a6a1902848e0fbbdb2"
+    }
+  ],
+  "observation_vs_interpretation": {
+    "observed_facts": [
+      {
+        "check_id": "port_congestion",
+        "intent": "LIVE_PORT_CONGESTION_GENERAL",
+        "observed": {
+          "port": "Constanta",
+          "vessels_waiting": null,
+          "wait_hours": null,
+          "congestion_level": null,
+          "as_of": "2026-11-24T00:20:42.342Z"
+        },
+        "cost_usd": 0.01,
+        "miner_id": "9002",
+        "signal_hash": "0x84e72e471f7c86dfd68c245b2da573dad2c7ce5c1ef0c2a87a71b7e3eb0f62db",
+        "receipt_hash": "0x3d026eea727aa79e21742b33d61a5cb22f29a8039e229d0c9ff4110a7ed8da45"
+      },
+      {
+        "check_id": "sanctions_counterparty",
+        "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+        "observed": {
+          "name": "Rosneft Oil Company",
+          "matched": true,
+          "matches": [
+            "OPEN JOINT-STOCK COMPANY ROSNEFT OIL COMPANY"
+          ],
+          "lists": [
+            "OFAC SDN list"
+          ],
+          "match_score": 1
+        },
+        "cost_usd": 0.01,
+        "miner_id": "302",
+        "signal_hash": "0x82048e300190b81b10e49e940d57d6fe2f81329d987162a6a1902848e0fbbdb2",
+        "receipt_hash": "0xd51c8790c633bb66f920c213dea3641533e77a89fc667c2d1953e429b3e72b87"
+      },
+      {
+        "check_id": "macro_baseline",
+        "intent": "MACRO_ECONOMIC_INDICATOR_GENERAL",
+        "observed": {
+          "rate_pct": 5.4
+        },
+        "cost_usd": 0.01,
+        "miner_id": "1900999012",
+        "signal_hash": "0xf2e97767359c515bc05b7f3debf566683730c3e77d76f809930d2486678ddb91",
+        "receipt_hash": "0x8901ec01691292ca64ade391e05dfa245b3586f11f5d2e0154315917da56c019"
+      },
+      {
+        "check_id": "fx_eur_benchmark",
+        "intent": "FX_NOW_EUR",
+        "observed": {
+          "rate": 0.9141603437242891
+        },
+        "cost_usd": 0.01,
+        "miner_id": "20260828",
+        "signal_hash": "0x754bffbebbbf073a6732546d7cfbdf7b6a6600aa2e55de64eafae9312153df61",
+        "receipt_hash": "0x2ca00b6df55a92bf7a44ddd317d92b172d848981b8b883ac0412fefde52fa70a"
+      }
+    ],
+    "analyst_interpretation": "1 explicit discrepancy/uncertainty flag(s) detected across 4 verified check(s). Inspect each contradiction row rather than averaging into a single headline."
+  },
+  "cost_accounting": {
+    "total_cost_usd": 0.04,
+    "cost_per_verified_claim_usd": 0.01,
+    "cached_reuse_count": 0,
+    "p50_latency_ms": 5723,
+    "max_latency_ms": 25623,
+    "budget_snapshot": {
+      "day": "2026-11-24",
+      "spending_authorized": true,
+      "max_per_call_usd": 0.05,
+      "max_per_run_usd": 0.12,
+      "max_daily_usd": 0.5,
+      "run_spent_usd": 0.04,
+      "daily_spent_usd": 0.04,
+      "daily_reserved_usd": 0,
+      "daily_remaining_usd": 0.46,
+      "consecutive_failures": 0,
+      "circuit_open": false,
+      "ledger_count": 5
+    }
+  },
+  "checks": [
+    {
+      "check_id": "port_congestion",
+      "label": "Observed port queue & wait hours (Constanta)",
+      "intent": "LIVE_PORT_CONGESTION_GENERAL",
+      "params": {
+        "port": "Constanta"
+      },
+      "status": "VERIFIED",
+      "classification": "OBSERVED_CONTEXT",
+      "discrepancy_points": 0,
+      "contradiction": null,
+      "quality_flags": [],
+      "cost_usd": 0.01,
+      "latency_ms": 25623,
+      "cached_reuse": false,
+      "provenance": {
+        "miner_id": "9002",
+        "miner_name": "TxLens",
+        "signal_hash": "0x84e72e471f7c86dfd68c245b2da573dad2c7ce5c1ef0c2a87a71b7e3eb0f62db",
+        "receipt_hash": "0x3d026eea727aa79e21742b33d61a5cb22f29a8039e229d0c9ff4110a7ed8da45",
+        "epoch_id": 46,
+        "rail": "escrow",
+        "simulated": false
+      },
+      "observed": {
+        "port": "Constanta",
+        "vessels_waiting": null,
+        "wait_hours": null,
+        "congestion_level": null,
+        "as_of": "2026-11-24T00:20:42.342Z"
+      }
+    },
+    {
+      "check_id": "sanctions_counterparty",
+      "label": "Counterparty sanctions screening (Rosneft Oil Company)",
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "params": {
+        "name": "Rosneft Oil Company"
+      },
+      "status": "VERIFIED",
+      "classification": "CONTRADICTS_REPORTED_CLAIM",
+      "discrepancy_points": 40,
+      "contradiction": {
+        "type": "SANCTIONS_HIT_DISCREPANCY",
+        "severity": "CRITICAL",
+        "reported": "No sanctioned counterparty",
+        "observed": "MATCHED (OFAC SDN list) — OPEN JOINT-STOCK COMPANY ROSNEFT OIL COMPANY",
+        "detail": "Counterparty \"Rosneft Oil Company\" matched official sanctions list(s), contradicting clean attestation."
+      },
+      "quality_flags": [],
+      "cost_usd": 0.01,
+      "latency_ms": 16662,
+      "cached_reuse": false,
+      "provenance": {
+        "miner_id": "302",
+        "miner_name": "ChainSight — Universal Intelligence & Data Oracle",
+        "signal_hash": "0x82048e300190b81b10e49e940d57d6fe2f81329d987162a6a1902848e0fbbdb2",
+        "receipt_hash": "0xd51c8790c633bb66f920c213dea3641533e77a89fc667c2d1953e429b3e72b87",
+        "epoch_id": 46,
+        "rail": "escrow",
+        "simulated": false
+      },
+      "observed": {
+        "name": "Rosneft Oil Company",
+        "matched": true,
+        "matches": [
+          "OPEN JOINT-STOCK COMPANY ROSNEFT OIL COMPANY"
+        ],
+        "lists": [
+          "OFAC SDN list"
+        ],
+        "match_score": 1
+      }
+    },
+    {
+      "check_id": "weather_corridor",
+      "label": "Recorded loading-window weather (Constanta, 2026-11-18)",
+      "intent": "WEATHER_FORECAST_VERIFY_GENERAL",
+      "params": {
+        "location": "Constanta",
+        "date": "2026-11-18"
+      },
+      "status": "FAILED_OR_BLOCKED",
+      "classification": "UNAVAILABLE",
+      "discrepancy_points": 0,
+      "contradiction": null,
+      "quality_flags": [
+        "Network/timeout error: fetch failed"
+      ],
+      "cost_usd": 0,
+      "latency_ms": 1464,
+      "cached_reuse": false,
+      "provenance": null,
+      "observed": null
+    },
+    {
+      "check_id": "macro_baseline",
+      "label": "World Bank macro baseline (Romania unemployment rate)",
+      "intent": "MACRO_ECONOMIC_INDICATOR_GENERAL",
+      "params": {
+        "indicator": "unemployment rate",
+        "country": "Romania",
+        "year": 2024
+      },
+      "status": "VERIFIED",
+      "classification": "SUPPORTS_REPORTED_CLAIM",
+      "discrepancy_points": 0,
+      "contradiction": null,
+      "quality_flags": [],
+      "cost_usd": 0.01,
+      "latency_ms": 5723,
+      "cached_reuse": false,
+      "provenance": {
+        "miner_id": "1900999012",
+        "miner_name": "MetricWire Macro Economic Indicator",
+        "signal_hash": "0xf2e97767359c515bc05b7f3debf566683730c3e77d76f809930d2486678ddb91",
+        "receipt_hash": "0x8901ec01691292ca64ade391e05dfa245b3586f11f5d2e0154315917da56c019",
+        "epoch_id": 46,
+        "rail": "escrow",
+        "simulated": false
+      },
+      "observed": {
+        "rate_pct": 5.4
+      }
+    },
+    {
+      "check_id": "fx_eur_benchmark",
+      "label": "Deterministic USD/EUR freight settlement rate",
+      "intent": "FX_NOW_EUR",
+      "params": {
+        "currency": "EUR"
+      },
+      "status": "VERIFIED",
+      "classification": "OBSERVED_CONTEXT",
+      "discrepancy_points": 0,
+      "contradiction": null,
+      "quality_flags": [],
+      "cost_usd": 0.01,
+      "latency_ms": 4992,
+      "cached_reuse": false,
+      "provenance": {
+        "miner_id": "20260828",
+        "miner_name": "PREFLIGHT Infrastructure Signals",
+        "signal_hash": "0x754bffbebbbf073a6732546d7cfbdf7b6a6600aa2e55de64eafae9312153df61",
+        "receipt_hash": "0x2ca00b6df55a92bf7a44ddd317d92b172d848981b8b883ac0412fefde52fa70a",
+        "epoch_id": 46,
+        "rail": "escrow",
+        "simulated": false
+      },
+      "observed": {
+        "rate": 0.9141603437242891
+      }
+    }
+  ]
+}

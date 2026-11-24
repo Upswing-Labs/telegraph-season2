@@ -1,0 +1,133 @@
+version: "1"
+kind: miner
+id: 880401
+slug: upswing-solsignal-liquidity
+protocol: generic
+name: Upswing SolSignal Multi-Chain Liquidity & Risk Oracle
+description: Live multi-chain DEX liquidity verification (strict chain-matching, fixing cross-chain hallucinations), Solana/EVM token fraud-risk scoring via Upswing SolSignal AMM dump stress-test & RugCheck, and median multi-exchange crypto spot prices.
+base_url: https://upswing-solsignal-miner.upswing-labs.workers.dev
+
+auth:
+  type: none
+
+docs:
+  website: https://upswing-solsignal.upswing-labs.workers.dev
+  documentation: https://upswing-solsignal.upswing-labs.workers.dev/docs/scoring
+  repository: https://github.com/Upswing-Labs/telegraph-season2
+
+rate_limit_per_sec: 10
+cache_ttl_sec: 30
+circuit_threshold: 5
+circuit_cooldown_seconds: 30
+
+limitations:
+  - code: MAX_PARAM_SIZE
+    message: pool, subject, or symbol parameter must be at most 128 characters
+    param: pool
+    property: length
+    value_num: 128
+    operator: lte
+  - code: ACCOUNT_QUOTA
+    message: Upstream public DexScreener and RugCheck fair-use cap of 300 requests per minute
+    property: rate
+    value_num: 300
+    window_seconds: 60
+
+endpoints:
+  - path: /v1/liquidity
+    external_path: /v1/liquidity
+    method: GET
+    description: Verify exact DEX pool or token liquidity in USD on a specific chain with strict chain-match enforcement (refuses cross-chain hallucinations with HTTP 422) and constant-product AMM sell-impact stress tiers ($5k, $25k, $100k).
+    intents:
+      - LIQUIDITY_DEPTH_VERIFY_GENERAL
+    params:
+      query:
+        required:
+          - name: pool
+            type: string
+            intents: ["*"]
+            description: "DEX pair/pool address or token contract address (0x... EVM hex or Base58 Solana mint/pool)."
+          - name: chain
+            type: string
+            intents: ["*"]
+            description: "Target blockchain name (ethereum, solana, base, arbitrum, bsc, polygon, optimism, avalanche)."
+
+  - path: /v1/fraud-risk
+    external_path: /v1/fraud-risk
+    method: GET
+    description: Assess token or pool fraud/rug risk (LOW, MEDIUM, HIGH, CRITICAL) and 0-1 normalized risk score using Upswing SolSignal (RugCheck authorities, LP lock, FDV/liquidity distortion, constant-product AMM dump stress-test).
+    intents:
+      - FRAUD_RISK_GENERAL
+    params:
+      query:
+        required:
+          - name: subject
+            type: string
+            intents: ["*"]
+            description: "Solana SPL mint address (Base58) or EVM token/pool address (0x...) to evaluate for rug/honeypot/liquidity fraud risk."
+
+  - path: /v1/crypto-price
+    external_path: /v1/crypto-price
+    method: GET
+    description: Live median USD spot price for a major cryptocurrency asset symbol aggregated across public exchange feeds (Coinbase + Kraken).
+    intents:
+      - CRYPTO_PRICE_USD
+    params:
+      query:
+        required:
+          - name: symbol
+            type: string
+            intents: ["*"]
+            description: "Uppercase cryptocurrency ticker symbol, e.g. BTC, ETH, SOL, USDC, BONK, JUP."
+
+intent_mapping:
+  LIQUIDITY_DEPTH_VERIFY_GENERAL:
+    endpoint: /v1/liquidity
+    input:
+      pool:
+        from: pool
+        how: "Exact DEX pool or token contract address as provided, trimmed."
+      chain:
+        from: chain
+        how: "Lowercase canonical chain id (ethereum, solana, base, arbitrum, bsc, polygon)."
+    output:
+      liquidity_usd:
+        path: liquidity_usd
+        unit: USD
+
+  FRAUD_RISK_GENERAL:
+    endpoint: /v1/fraud-risk
+    input:
+      subject:
+        from: subject
+        how: "Solana SPL mint or EVM 0x address to inspect."
+    output:
+      risk_level:
+        path: risk_level
+      risk_score:
+        path: risk_score
+      signals:
+        path: signals
+      summary:
+        path: summary
+
+  CRYPTO_PRICE_USD:
+    endpoint: /v1/crypto-price
+    input:
+      symbol:
+        from: symbol
+        how: "Uppercase ticker symbol (e.g. BTC, ETH, SOL)."
+    output:
+      price_usd:
+        path: price_usd
+        unit: US dollars
+
+semantics:
+  signal_mapping:
+    confidence_field: confidence
+    label_field: verdict_label
+    reason_field: summary
+  supported_intents:
+    - LIQUIDITY_DEPTH_VERIFY_GENERAL
+    - FRAUD_RISK_GENERAL
+    - CRYPTO_PRICE_USD

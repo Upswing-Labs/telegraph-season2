@@ -1,0 +1,201 @@
+{
+  "product": "upswing-factgap",
+  "mission": "Mission 05 — Conflict Intelligence (Routes 2 & 3)",
+  "dossier_id": "sanctioned-crude-tanker",
+  "title": "Shadow-Fleet Crude Shipment — Sanctions, AIS Telemetry & Claim Contradiction Audit",
+  "route": "Route 2 (Reported-vs-Observed) + Route 3 (Research Priced per Fact)",
+  "customer": "Sovereign Risk & Maritime Sanctions Desk",
+  "network_mode": "api_key",
+  "simulated": false,
+  "generated_at": "2026-11-24T00:23:15.432Z",
+  "started_at": "2026-11-24T00:21:26.703Z",
+  "total_duration_ms": 108729,
+  "action_mode": "DRAFT_ONLY_NO_EXTERNAL_SIDE_EFFECT",
+  "epistemic_framing": "Provenance & confidence audit only: reports what purchased Telegraph inputs observed and where they contradict reported claims. Never asserts a definitive verdict on a live conflict.",
+  "reported_claim": {
+    "summary": "Charterer attestation asserts vessel is steaming normally at >10 knots with clear sanctions standing and verified non-sanctioned settlement wallet.",
+    "expected_sanctions_matched": false,
+    "expected_min_speed_knots": 10
+  },
+  "summary": {
+    "provenance_status": "LOW_DISCREPANCY_SUPPORTED",
+    "discrepancy_score": 0,
+    "evidence_completeness_pct": 50,
+    "planned_checks": 4,
+    "executed_checks": 4,
+    "verified_checks": 2,
+    "contradiction_count": 0,
+    "halted_reason": null
+  },
+  "contradictions": [],
+  "observation_vs_interpretation": {
+    "observed_facts": [
+      {
+        "check_id": "claim_fact_check",
+        "intent": "FACT_CHECK_GENERAL",
+        "observed": {
+          "claim": "OFAC SDN list includes Ethereum address 0x098B716B8Aaf21512996dC57EB0615e2383E2f96 under Lazarus Group",
+          "verdict": "Unverified",
+          "reasoning": "No credible source found in the searches directly confirms or refutes this claim. It is left Unverified rather than guessed at; lack of evidence does not mean the claim is false.",
+          "sources": [
+            "https://en.wikipedia.org/wiki/Lazarus_Group",
+            "https://www.credscore.us/"
+          ]
+        },
+        "cost_usd": 0.01,
+        "miner_id": "83159274",
+        "signal_hash": "0x35b1017dce806791055c509a5cc4f24952ed5d7370c6bd54251ef6888faa9cc3",
+        "receipt_hash": "0xab9e3531a9df4d24dfbe9dd3f58d0304f3c1273d687e7252ff8b5251deea6be3"
+      },
+      {
+        "check_id": "open_web_corroboration",
+        "intent": "WEB_SEARCH_GENERAL",
+        "observed": {
+          "answer": "The U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) designated the Lazarus Group on September 13, 2019. This designation includes the Ethereum digital currency address 0x098B716B8Aaf21512996dC57EB0615e2383E2f96 under North Korea Sanctions Regulations section 510.214.",
+          "sources": [
+            "https://ofac.treasury.gov/recent-actions/20220414",
+            "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=27307",
+            "Treasury Sanctions Individuals Laundering Cryptocurrency for Lazarus Group | U.S. Department of the"
+          ],
+          "brief": "The U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) designated the Lazarus Group on September 13, 2019. This designation includes the Ethereum digital currency address 0x098B716B8Aaf21512996dC57EB0615e2383E2f96 under North Korea Sanctions Regulations section 510.214."
+        },
+        "cost_usd": 0.01,
+        "miner_id": "9002",
+        "signal_hash": "0x7883c146a9bc82a9606f2e2fd797afca1dd13648847d345a33d3cf27b2ca2996",
+        "receipt_hash": "0x41892322c1e4ba4ebaf76e8beee9f1e6dc64a093f51b29a732044be0fc7b1834"
+      }
+    ],
+    "analyst_interpretation": "All 2 verified Telegraph check(s) align with the reported baseline within configured tolerances."
+  },
+  "cost_accounting": {
+    "total_cost_usd": 0.02,
+    "cost_per_verified_claim_usd": 0.01,
+    "cached_reuse_count": 0,
+    "p50_latency_ms": 33736,
+    "max_latency_ms": 43508,
+    "budget_snapshot": {
+      "day": "2026-11-24",
+      "spending_authorized": true,
+      "max_per_call_usd": 0.05,
+      "max_per_run_usd": 0.1,
+      "max_daily_usd": 0.5,
+      "run_spent_usd": 0.02,
+      "daily_spent_usd": 0.02,
+      "daily_reserved_usd": 0,
+      "daily_remaining_usd": 0.48,
+      "consecutive_failures": 0,
+      "circuit_open": false,
+      "ledger_count": 4
+    }
+  },
+  "checks": [
+    {
+      "check_id": "wallet_sanctions",
+      "label": "Settlement wallet OFAC SDN screening (0x098B716B...2f96)",
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "params": {
+        "name": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96"
+      },
+      "status": "FAILED_OR_BLOCKED",
+      "classification": "UNAVAILABLE",
+      "discrepancy_points": 0,
+      "contradiction": null,
+      "quality_flags": [
+        "Network/timeout error: fetch failed"
+      ],
+      "cost_usd": 0,
+      "latency_ms": 33736,
+      "cached_reuse": false,
+      "provenance": null,
+      "observed": null
+    },
+    {
+      "check_id": "vessel_ais",
+      "label": "Observed maritime AIS speed & coordinates",
+      "intent": "VESSEL_TELEMETRY_VERIFY_GENERAL",
+      "params": {
+        "vessel": "IMO 9285471"
+      },
+      "status": "FAILED_OR_BLOCKED",
+      "classification": "UNAVAILABLE",
+      "discrepancy_points": 0,
+      "contradiction": null,
+      "quality_flags": [
+        "Network/timeout error: fetch failed"
+      ],
+      "cost_usd": 0,
+      "latency_ms": 10603,
+      "cached_reuse": false,
+      "provenance": null,
+      "observed": null
+    },
+    {
+      "check_id": "claim_fact_check",
+      "label": "Independent fact check of public maritime sanctions bulletin",
+      "intent": "FACT_CHECK_GENERAL",
+      "params": {
+        "claim": "OFAC SDN list includes Ethereum address 0x098B716B8Aaf21512996dC57EB0615e2383E2f96 under Lazarus Group"
+      },
+      "status": "VERIFIED",
+      "classification": "INCONCLUSIVE_AMBIGUOUS",
+      "discrepancy_points": 0,
+      "contradiction": null,
+      "quality_flags": [],
+      "cost_usd": 0.01,
+      "latency_ms": 43508,
+      "cached_reuse": false,
+      "provenance": {
+        "miner_id": "83159274",
+        "miner_name": "TelegraphIntent",
+        "signal_hash": "0x35b1017dce806791055c509a5cc4f24952ed5d7370c6bd54251ef6888faa9cc3",
+        "receipt_hash": "0xab9e3531a9df4d24dfbe9dd3f58d0304f3c1273d687e7252ff8b5251deea6be3",
+        "epoch_id": 46,
+        "rail": "escrow",
+        "simulated": false
+      },
+      "observed": {
+        "claim": "OFAC SDN list includes Ethereum address 0x098B716B8Aaf21512996dC57EB0615e2383E2f96 under Lazarus Group",
+        "verdict": "Unverified",
+        "reasoning": "No credible source found in the searches directly confirms or refutes this claim. It is left Unverified rather than guessed at; lack of evidence does not mean the claim is false.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lazarus_Group",
+          "https://www.credscore.us/"
+        ]
+      }
+    },
+    {
+      "check_id": "open_web_corroboration",
+      "label": "Live web corroboration for recent port/sanctions notices",
+      "intent": "WEB_SEARCH_GENERAL",
+      "params": {
+        "query": "OFAC Lazarus Group 0x098B716B8Aaf21512996dC57EB0615e2383E2f96 sanctions"
+      },
+      "status": "VERIFIED",
+      "classification": "OBSERVED_CONTEXT",
+      "discrepancy_points": 0,
+      "contradiction": null,
+      "quality_flags": [],
+      "cost_usd": 0.01,
+      "latency_ms": 20879,
+      "cached_reuse": false,
+      "provenance": {
+        "miner_id": "9002",
+        "miner_name": "TxLens",
+        "signal_hash": "0x7883c146a9bc82a9606f2e2fd797afca1dd13648847d345a33d3cf27b2ca2996",
+        "receipt_hash": "0x41892322c1e4ba4ebaf76e8beee9f1e6dc64a093f51b29a732044be0fc7b1834",
+        "epoch_id": 46,
+        "rail": "escrow",
+        "simulated": false
+      },
+      "observed": {
+        "answer": "The U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) designated the Lazarus Group on September 13, 2019. This designation includes the Ethereum digital currency address 0x098B716B8Aaf21512996dC57EB0615e2383E2f96 under North Korea Sanctions Regulations section 510.214.",
+        "sources": [
+          "https://ofac.treasury.gov/recent-actions/20220414",
+          "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=27307",
+          "Treasury Sanctions Individuals Laundering Cryptocurrency for Lazarus Group | U.S. Department of the"
+        ],
+        "brief": "The U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) designated the Lazarus Group on September 13, 2019. This designation includes the Ethereum digital currency address 0x098B716B8Aaf21512996dC57EB0615e2383E2f96 under North Korea Sanctions Regulations section 510.214."
+      }
+    }
+  ]
+}
