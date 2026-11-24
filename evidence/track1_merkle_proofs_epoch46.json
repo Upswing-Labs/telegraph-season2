@@ -1,0 +1,304 @@
+{
+  "epoch_id": 46,
+  "verified_count": 9,
+  "total_receipts": 9,
+  "proofs": [
+    {
+      "scenario": "track1_live_red_sea.json",
+      "intent": "LIVE_PORT_CONGESTION_GENERAL",
+      "epoch_id": 46,
+      "receipt_hash": "0x235e746fec4ebd3d2014581708f5269fb7fd232c0a8613fb0178d3ea0d8881ca",
+      "verified": true,
+      "proof_data": {
+        "block_data_root": "0x38109cce325e334d7aefb4d4652eeb524645112cef0d41606616669f6c35158f",
+        "deliveries_root": "0x082a9784615b35435b74c1673cb9686b6c168d81f34ff2f00725b5091408f831",
+        "delivery": {
+          "receipt_hash": "0x235e746fec4ebd3d2014581708f5269fb7fd232c0a8613fb0178d3ea0d8881ca",
+          "payer": "0x8d1d06f67f1fc356ac566052777139e8e3a4b592",
+          "miner_id": "6121",
+          "intent": "LIVE_PORT_CONGESTION_GENERAL",
+          "usdc": 10000,
+          "class": "paid_consumer",
+          "ranking_round": 46
+        },
+        "epoch_id": 46,
+        "proof": [
+          "0xc81077f0f7988a82a5558c43051b5cf17866e5aafe6ec82d1292cc9fd072c359",
+          "0xd4a8781e1027bd4f9b508028d29eecef89b54ee327cda30d4b01a665972f6192",
+          "0x1127d532d0f8ef1ccee935bd111c6420f1b01d5b6fa98e4d3bd8fd3f23e2e5d1",
+          "0xe92148af2b4514c7b1a74e76650031cd7db2501c5291a51f9696423a79ea3861",
+          "0x719f163203a8f7ecc3ed8112a02cc2ab0153580f87007d67240815da963a23b2",
+          "0x5caf7708a116565ffa078ec676addfb3ec90c0e90e057614eb868d0915a17406",
+          "0xc81378f668f034f98839624650e5f4afec01922a2e0703a3817881daa24a77d7",
+          "0x6483cd99a92b9853fd257a26dd580af99e4d1771a1952f707fd3ce90f4fb63d8",
+          "0x200c58c3eaf8620c42bd680351573ed1533cdc24d12bcf47589fbf38d7024752"
+        ],
+        "protocol_state_root": "0x22b6eb9a0e9f1ccdd0ada5a772e5f5b6d9b72519327e2fa79e9715ef713455a1"
+      }
+    },
+    {
+      "scenario": "track1_live_red_sea.json",
+      "intent": "FACT_CHECK_GENERAL",
+      "epoch_id": 46,
+      "receipt_hash": "0x36860f2c4885205d85ce24595145dbbdc8c06a17929024121627586df5c64cfd",
+      "verified": true,
+      "proof_data": {
+        "block_data_root": "0x38109cce325e334d7aefb4d4652eeb524645112cef0d41606616669f6c35158f",
+        "deliveries_root": "0x082a9784615b35435b74c1673cb9686b6c168d81f34ff2f00725b5091408f831",
+        "delivery": {
+          "receipt_hash": "0x36860f2c4885205d85ce24595145dbbdc8c06a17929024121627586df5c64cfd",
+          "payer": "0x8d1d06f67f1fc356ac566052777139e8e3a4b592",
+          "miner_id": "6183",
+          "intent": "FACT_CHECK_GENERAL",
+          "usdc": 10000,
+          "class": "paid_consumer",
+          "ranking_round": 46
+        },
+        "epoch_id": 46,
+        "proof": [
+          "0x8c86209db6efb870395a756bc16401b00f5682a2017f13a6085e43256113c0de",
+          "0xd6f31ed779fadfde5defd91e84b7960330656505991e6bb89e74ed25587c533e",
+          "0xfc585e2d15656ccb1f4d0a154123324009588c3c6e3805732a3c00353dd7bafa",
+          "0x517e7f0a12bba4dc0ac3516703f55f757f358958e219957df3340501ac088f88",
+          "0xf18033cb177b579027bae17836b01bdec830ed4ab7743f04592e2fe7ff249c36",
+          "0x5caf7708a116565ffa078ec676addfb3ec90c0e90e057614eb868d0915a17406",
+          "0xc81378f668f034f98839624650e5f4afec01922a2e0703a3817881daa24a77d7",
+          "0x6483cd99a92b9853fd257a26dd580af99e4d1771a1952f707fd3ce90f4fb63d8",
+          "0x200c58c3eaf8620c42bd680351573ed1533cdc24d12bcf47589fbf38d7024752"
+        ],
+        "protocol_state_root": "0x22b6eb9a0e9f1ccdd0ada5a772e5f5b6d9b72519327e2fa79e9715ef713455a1"
+      }
+    },
+    {
+      "scenario": "track1_live_red_sea.json",
+      "intent": "WEB_SEARCH_GENERAL",
+      "epoch_id": 46,
+      "receipt_hash": "0x29a22d06f3f145a80a0c1712306e7cd2b5adc03178b1d0d49fd54d2e034240f5",
+      "verified": true,
+      "proof_data": {
+        "block_data_root": "0x38109cce325e334d7aefb4d4652eeb524645112cef0d41606616669f6c35158f",
+        "deliveries_root": "0x082a9784615b35435b74c1673cb9686b6c168d81f34ff2f00725b5091408f831",
+        "delivery": {
+          "receipt_hash": "0x29a22d06f3f145a80a0c1712306e7cd2b5adc03178b1d0d49fd54d2e034240f5",
+          "payer": "0x8d1d06f67f1fc356ac566052777139e8e3a4b592",
+          "miner_id": "6121",
+          "intent": "WEB_SEARCH_GENERAL",
+          "usdc": 10000,
+          "class": "paid_consumer",
+          "ranking_round": 46
+        },
+        "epoch_id": 46,
+        "proof": [
+          "0x02ca785eb7387ab9e596179003ac62df01734e693d7da364f4baae4033cc6bc7",
+          "0xe02cf3cd975f4372fa91a07e6e05e6862e233e7730d17e84ae441c82ecd38f98",
+          "0x8e90c32b7e93f5e7f23fc84c6f0cfb724245a0939b81ddd7fdb29bcc321dd779",
+          "0x2291a0bc3aeb9caa5fce8c0528cbe70f7807fec09b3ba7f3be7a74f0cf1e74f1",
+          "0xf18033cb177b579027bae17836b01bdec830ed4ab7743f04592e2fe7ff249c36",
+          "0x5caf7708a116565ffa078ec676addfb3ec90c0e90e057614eb868d0915a17406",
+          "0xc81378f668f034f98839624650e5f4afec01922a2e0703a3817881daa24a77d7",
+          "0x6483cd99a92b9853fd257a26dd580af99e4d1771a1952f707fd3ce90f4fb63d8",
+          "0x200c58c3eaf8620c42bd680351573ed1533cdc24d12bcf47589fbf38d7024752"
+        ],
+        "protocol_state_root": "0x22b6eb9a0e9f1ccdd0ada5a772e5f5b6d9b72519327e2fa79e9715ef713455a1"
+      }
+    },
+    {
+      "scenario": "track1_live_black_sea.json",
+      "intent": "LIVE_PORT_CONGESTION_GENERAL",
+      "epoch_id": 46,
+      "receipt_hash": "0x3d026eea727aa79e21742b33d61a5cb22f29a8039e229d0c9ff4110a7ed8da45",
+      "verified": true,
+      "proof_data": {
+        "block_data_root": "0x38109cce325e334d7aefb4d4652eeb524645112cef0d41606616669f6c35158f",
+        "deliveries_root": "0x082a9784615b35435b74c1673cb9686b6c168d81f34ff2f00725b5091408f831",
+        "delivery": {
+          "receipt_hash": "0x3d026eea727aa79e21742b33d61a5cb22f29a8039e229d0c9ff4110a7ed8da45",
+          "payer": "0x8d1d06f67f1fc356ac566052777139e8e3a4b592",
+          "miner_id": "6121",
+          "intent": "LIVE_PORT_CONGESTION_GENERAL",
+          "usdc": 10000,
+          "class": "paid_consumer",
+          "ranking_round": 46
+        },
+        "epoch_id": 46,
+        "proof": [
+          "0x5826251ed082c597eeaf0b6cca120377bacdd405cfc00b4440d691cb2475174d",
+          "0xb62666e131a38e4f0556781fc3168b379295ce5b9e7b2ba62ffa5429ba384e23",
+          "0xeaf06ebe1d9ebf3c4635b2f4825ee108571b38646233316b3881b7a84d0e77ce",
+          "0x0340f5462093ab60fa0309c9595b6a85fb71c51170982b1e60f08b8e940e43c7",
+          "0xc6df163e7c54a5900a7ec1325f51fe7243dc924d18991eafe0a13241e7dc7396",
+          "0x2963562deb4cc07a9de84282eaad69fe3135d4b57265bd58e044ee451a577887",
+          "0x5c66a7027ca63ff00f5a6fcb9d4a8446c7b088171e8f252f4191fcf9f1929ac5",
+          "0x6483cd99a92b9853fd257a26dd580af99e4d1771a1952f707fd3ce90f4fb63d8",
+          "0x200c58c3eaf8620c42bd680351573ed1533cdc24d12bcf47589fbf38d7024752"
+        ],
+        "protocol_state_root": "0x22b6eb9a0e9f1ccdd0ada5a772e5f5b6d9b72519327e2fa79e9715ef713455a1"
+      }
+    },
+    {
+      "scenario": "track1_live_black_sea.json",
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "epoch_id": 46,
+      "receipt_hash": "0xd51c8790c633bb66f920c213dea3641533e77a89fc667c2d1953e429b3e72b87",
+      "verified": true,
+      "proof_data": {
+        "block_data_root": "0x38109cce325e334d7aefb4d4652eeb524645112cef0d41606616669f6c35158f",
+        "deliveries_root": "0x082a9784615b35435b74c1673cb9686b6c168d81f34ff2f00725b5091408f831",
+        "delivery": {
+          "receipt_hash": "0xd51c8790c633bb66f920c213dea3641533e77a89fc667c2d1953e429b3e72b87",
+          "payer": "0x8d1d06f67f1fc356ac566052777139e8e3a4b592",
+          "miner_id": "6119",
+          "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "usdc": 10000,
+          "class": "paid_consumer",
+          "ranking_round": 45
+        },
+        "epoch_id": 46,
+        "proof": [
+          "0xc01877a97b46d814d0f69860225c69231559f269fa52bed256d6f0bab73ca7c9",
+          "0x12c099ab9c382d38919b21a2aa73d9331e68b8c63c560fcba66f229e48e1813f",
+          "0x0f333f8f14c63de614dadd82bace28bf47d67a4722d5f08e15fd8d5e823e1488",
+          "0x27e2e8b3fe7c9ad8623b0da4213e2c9726d84ba3bd02ff4d6a63c36376d648f1",
+          "0x581798e3935d9bce79acfdc43b77a144e1c73a0a9f75f03d7624e83fcf014943",
+          "0xb2ce4449bc4e26619d57ec8442f803046d9bf2739983ea85cbe78460a8503a22",
+          "0x1cc6f92e69cc3eda193b382b09ae5709cff96264f8c82b6a6f3f8b7e52237dbc",
+          "0x7cc7d01eb3b765eb3fd91c78618d00917cd4349a50b3b8233291c59d5a52de54",
+          "0x200c58c3eaf8620c42bd680351573ed1533cdc24d12bcf47589fbf38d7024752"
+        ],
+        "protocol_state_root": "0x22b6eb9a0e9f1ccdd0ada5a772e5f5b6d9b72519327e2fa79e9715ef713455a1"
+      }
+    },
+    {
+      "scenario": "track1_live_black_sea.json",
+      "intent": "MACRO_ECONOMIC_INDICATOR_GENERAL",
+      "epoch_id": 46,
+      "receipt_hash": "0x8901ec01691292ca64ade391e05dfa245b3586f11f5d2e0154315917da56c019",
+      "verified": true,
+      "proof_data": {
+        "block_data_root": "0x38109cce325e334d7aefb4d4652eeb524645112cef0d41606616669f6c35158f",
+        "deliveries_root": "0x082a9784615b35435b74c1673cb9686b6c168d81f34ff2f00725b5091408f831",
+        "delivery": {
+          "receipt_hash": "0x8901ec01691292ca64ade391e05dfa245b3586f11f5d2e0154315917da56c019",
+          "payer": "0x8d1d06f67f1fc356ac566052777139e8e3a4b592",
+          "miner_id": "4991",
+          "intent": "MACRO_ECONOMIC_INDICATOR_GENERAL",
+          "usdc": 10000,
+          "class": "paid_consumer",
+          "ranking_round": 46
+        },
+        "epoch_id": 46,
+        "proof": [
+          "0xc0981b27e1f64dd8e5d87561f48004a31295aecb6036ab2a3285b0635a3253c7",
+          "0xf9f95aefcc759e7feb7fc2dd0db6b718dcd7d11f9d42d03bfeb33e1ead320cee",
+          "0x2be0588e8277fb7b37d11250c11c8ef1cb6e77ce8a12a83d1bfa556ff2dd98a7",
+          "0xbac686832143ead9b21d2304dee253efca369936be6841bb884b96a543f8675b",
+          "0xb6b1de797001c368875b4b938473a4425f4aacc09a0dc371e73be27b6f4ffb78",
+          "0xddfaefa1a911cc4ebe51b15a4105ccdc78f44e005051d9a68806ac8378e37587",
+          "0xcf38bcd088804cedc0612a44869c0fd0cf6d9b1aea024f9f8ee1b5c19446a2f2",
+          "0x7cc7d01eb3b765eb3fd91c78618d00917cd4349a50b3b8233291c59d5a52de54",
+          "0x200c58c3eaf8620c42bd680351573ed1533cdc24d12bcf47589fbf38d7024752"
+        ],
+        "protocol_state_root": "0x22b6eb9a0e9f1ccdd0ada5a772e5f5b6d9b72519327e2fa79e9715ef713455a1"
+      }
+    },
+    {
+      "scenario": "track1_live_black_sea.json",
+      "intent": "FX_NOW_EUR",
+      "epoch_id": 46,
+      "receipt_hash": "0x2ca00b6df55a92bf7a44ddd317d92b172d848981b8b883ac0412fefde52fa70a",
+      "verified": true,
+      "proof_data": {
+        "block_data_root": "0x38109cce325e334d7aefb4d4652eeb524645112cef0d41606616669f6c35158f",
+        "deliveries_root": "0x082a9784615b35435b74c1673cb9686b6c168d81f34ff2f00725b5091408f831",
+        "delivery": {
+          "receipt_hash": "0x2ca00b6df55a92bf7a44ddd317d92b172d848981b8b883ac0412fefde52fa70a",
+          "payer": "0x8d1d06f67f1fc356ac566052777139e8e3a4b592",
+          "miner_id": "5311",
+          "intent": "FX_NOW_EUR",
+          "usdc": 10000,
+          "class": "paid_consumer",
+          "ranking_round": 46
+        },
+        "epoch_id": 46,
+        "proof": [
+          "0xb3852dc1ee9fe3f256bd0d1df2eac45ee27117038e14737ea1477551cbde8347",
+          "0xacedd4aaffd8cf17c14f67dc1b414a096d100494345fd92448760b30d27497f1",
+          "0x66c479be0441e7b50c558d280ade46e6fb47f61d839078308dc1b5d963cef0e7",
+          "0x2291a0bc3aeb9caa5fce8c0528cbe70f7807fec09b3ba7f3be7a74f0cf1e74f1",
+          "0xf18033cb177b579027bae17836b01bdec830ed4ab7743f04592e2fe7ff249c36",
+          "0x5caf7708a116565ffa078ec676addfb3ec90c0e90e057614eb868d0915a17406",
+          "0xc81378f668f034f98839624650e5f4afec01922a2e0703a3817881daa24a77d7",
+          "0x6483cd99a92b9853fd257a26dd580af99e4d1771a1952f707fd3ce90f4fb63d8",
+          "0x200c58c3eaf8620c42bd680351573ed1533cdc24d12bcf47589fbf38d7024752"
+        ],
+        "protocol_state_root": "0x22b6eb9a0e9f1ccdd0ada5a772e5f5b6d9b72519327e2fa79e9715ef713455a1"
+      }
+    },
+    {
+      "scenario": "track1_live_sanctioned_tanker.json",
+      "intent": "FACT_CHECK_GENERAL",
+      "epoch_id": 46,
+      "receipt_hash": "0xab9e3531a9df4d24dfbe9dd3f58d0304f3c1273d687e7252ff8b5251deea6be3",
+      "verified": true,
+      "proof_data": {
+        "block_data_root": "0x38109cce325e334d7aefb4d4652eeb524645112cef0d41606616669f6c35158f",
+        "deliveries_root": "0x082a9784615b35435b74c1673cb9686b6c168d81f34ff2f00725b5091408f831",
+        "delivery": {
+          "receipt_hash": "0xab9e3531a9df4d24dfbe9dd3f58d0304f3c1273d687e7252ff8b5251deea6be3",
+          "payer": "0x8d1d06f67f1fc356ac566052777139e8e3a4b592",
+          "miner_id": "6183",
+          "intent": "FACT_CHECK_GENERAL",
+          "usdc": 10000,
+          "class": "paid_consumer",
+          "ranking_round": 46
+        },
+        "epoch_id": 46,
+        "proof": [
+          "0x31a0b7562cbe2c6911619a7c5cdb9c06d0096ef2d530485cfe9bf613e813679a",
+          "0xe64f67b5b9f874f28d5de05bbd26cd2958923a32aba2346c0e3258234a347003",
+          "0xa175b7a9baf7f4ae182b43fc466e4201f8943288feee9bc4f1b7d71268568893",
+          "0x5b15b1b2d2a5ef360ffeb2077e36e377028673a93f94ddb8ba18e8dfe684576b",
+          "0x63699b5ddbed375c66779fa38ec6757c93e4f9b061a90e3a5f681987ccc8b028",
+          "0xbbdd9537163db1538c533af1a581f1e0c5a6cdbbf3e38bcebce6eef60e9f4cbb",
+          "0x1cc6f92e69cc3eda193b382b09ae5709cff96264f8c82b6a6f3f8b7e52237dbc",
+          "0x7cc7d01eb3b765eb3fd91c78618d00917cd4349a50b3b8233291c59d5a52de54",
+          "0x200c58c3eaf8620c42bd680351573ed1533cdc24d12bcf47589fbf38d7024752"
+        ],
+        "protocol_state_root": "0x22b6eb9a0e9f1ccdd0ada5a772e5f5b6d9b72519327e2fa79e9715ef713455a1"
+      }
+    },
+    {
+      "scenario": "track1_live_sanctioned_tanker.json",
+      "intent": "WEB_SEARCH_GENERAL",
+      "epoch_id": 46,
+      "receipt_hash": "0x41892322c1e4ba4ebaf76e8beee9f1e6dc64a093f51b29a732044be0fc7b1834",
+      "verified": true,
+      "proof_data": {
+        "block_data_root": "0x38109cce325e334d7aefb4d4652eeb524645112cef0d41606616669f6c35158f",
+        "deliveries_root": "0x082a9784615b35435b74c1673cb9686b6c168d81f34ff2f00725b5091408f831",
+        "delivery": {
+          "receipt_hash": "0x41892322c1e4ba4ebaf76e8beee9f1e6dc64a093f51b29a732044be0fc7b1834",
+          "payer": "0x8d1d06f67f1fc356ac566052777139e8e3a4b592",
+          "miner_id": "6121",
+          "intent": "WEB_SEARCH_GENERAL",
+          "usdc": 10000,
+          "class": "paid_consumer",
+          "ranking_round": 46
+        },
+        "epoch_id": 46,
+        "proof": [
+          "0x2702fe83a98250b2cb59cc7770683ac6e4fdc45154bf8df122df22716de4d034",
+          "0xad8dac0553e0ce1bc21bdf5c87feb121a1e61dfb5f190d9ecb783a8527ecdc8d",
+          "0xc0757e5599af9d33f29541797f8a961ebfd877ae21faafa395f0915f090a42f1",
+          "0xbf2867abc83bd7d4b43827451783bcc43c12d66f4e400745918f65784519a3b0",
+          "0xc6df163e7c54a5900a7ec1325f51fe7243dc924d18991eafe0a13241e7dc7396",
+          "0x2963562deb4cc07a9de84282eaad69fe3135d4b57265bd58e044ee451a577887",
+          "0x5c66a7027ca63ff00f5a6fcb9d4a8446c7b088171e8f252f4191fcf9f1929ac5",
+          "0x6483cd99a92b9853fd257a26dd580af99e4d1771a1952f707fd3ce90f4fb63d8",
+          "0x200c58c3eaf8620c42bd680351573ed1533cdc24d12bcf47589fbf38d7024752"
+        ],
+        "protocol_state_root": "0x22b6eb9a0e9f1ccdd0ada5a772e5f5b6d9b72519327e2fa79e9715ef713455a1"
+      }
+    }
+  ]
+}
