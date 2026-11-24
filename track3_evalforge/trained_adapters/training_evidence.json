@@ -1,0 +1,151 @@
+{
+  "schema": "upswing-telegraph-track3-lora-evidence-v1",
+  "generated_at_utc": "2026-11-24T20:39:36.874771+00:00",
+  "organization": "Upswing-Labs",
+  "network": {
+    "chain": "Ethereum Sepolia",
+    "chain_id": 11155111,
+    "diamond": "0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b",
+    "devnode": "https://devnode.telegraphprotocol.com"
+  },
+  "foundation": {
+    "version": "modernbert-base-lora16-v1",
+    "base_model": "answerdotai/ModernBERT-base",
+    "base_model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8",
+    "foundation_hash": "0a49b325304bb4cf292e683929689d0457966be264f60bfc94d0072b614bf8e6",
+    "engine_wasm_hash": "77643d6e1176ab8744801cef93ccb844d0136ed32b8daa865d541f37d13292de",
+    "tokenizer_hash": "67bc76f8b9386efba1a761c1c8e5ad439fd0eaf1c2826e9dd1a205c7af4dc456",
+    "bug_223_mitigated": true
+  },
+  "hardware": {
+    "device": "cuda",
+    "gpu_name": "NVIDIA L4",
+    "tier": "L4/24GB",
+    "vram_gb": 22.03,
+    "compute_capability": "8.9",
+    "precision": "bf16",
+    "bf16_supported": true,
+    "max_length": 512,
+    "batch_size": 4,
+    "grad_accum": 4,
+    "effective_batch_size": 16,
+    "eval_batch": 8,
+    "grad_checkpointing": true,
+    "torch_version": "2.14.1+cu130",
+    "python_version": "3.13.16"
+  },
+  "targets": {
+    "LIQUIDITY_DEPTH_VERIFY": {
+      "spec": {
+        "family": "LIQUIDITY_DEPTH_VERIFY",
+        "child_intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+        "class": "judgment",
+        "eligible_submitters": 8,
+        "eligible_rows": 527,
+        "missions": [
+          "01",
+          "02",
+          "03",
+          "09",
+          "13",
+          "14"
+        ]
+      },
+      "dataset_gate": {
+        "ok": true,
+        "n": 600,
+        "metrics": {
+          "unique_rejected_frac": 1.0,
+          "top_rejected_share": 0.0017,
+          "length_shortcut_acc": 0.505,
+          "eval_negative_leak": 0.0,
+          "surface_probe_acc": 0.5111,
+          "mean_len_chosen": 213.7,
+          "mean_len_rejected": 213.4
+        },
+        "failures": []
+      },
+      "champion_metrics": {
+        "intent": "LIQUIDITY_DEPTH_VERIFY",
+        "candidate": "r16_a32",
+        "base_model": "answerdotai/ModernBERT-base",
+        "tokenizer_sha256": "67bc76f8b9386efba1a761c1c8e5ad439fd0eaf1c2826e9dd1a205c7af4dc456",
+        "adapter_dir": "/content/work/runs/LIQUIDITY_DEPTH_VERIFY/r16_a32/adapter",
+        "reward_head": "/content/work/runs/LIQUIDITY_DEPTH_VERIFY/r16_a32/adapter/reward_head.pt",
+        "train_pairs": 510,
+        "val_pairs": 90,
+        "best_epoch": 5,
+        "elapsed_sec": 285.0,
+        "rank": 16,
+        "alpha": 32,
+        "lr": 8e-05,
+        "dropout": 0.15,
+        "max_length": 512,
+        "n_eval": 90,
+        "pairwise_accuracy": 0.9333,
+        "val_loss": 0.202829,
+        "mean_margin": 5.8727,
+        "median_margin": 3.5469,
+        "spearman": 0.4367,
+        "length_baseline": 0.5444,
+        "beats_length_baseline": true,
+        "verdict": "PASS",
+        "per_failure_mode_accuracy": {
+          "cross_chain_pool_swap": 1.0,
+          "honeypot_or_regime_inversion": 0.8462,
+          "reserve_accounting_fdv_mismatch": 0.9444,
+          "slippage_physics_violation": 0.8571
+        }
+      },
+      "sweep_summary": [
+        {
+          "candidate": "r8_a32",
+          "rank": 8,
+          "alpha": 32,
+          "pairwise_accuracy": 0.9222,
+          "val_loss": 0.176632,
+          "mean_margin": 7.2955,
+          "spearman": 0.4754,
+          "elapsed_sec": 297.7
+        },
+        {
+          "candidate": "r16_a32",
+          "rank": 16,
+          "alpha": 32,
+          "pairwise_accuracy": 0.9333,
+          "val_loss": 0.202829,
+          "mean_margin": 5.8727,
+          "spearman": 0.4367,
+          "elapsed_sec": 285.0
+        }
+      ],
+      "stage1_package": {
+        "valid": true,
+        "path": "/content/work/exports/LIQUIDITY_DEPTH_VERIFY_upswing_champion.safetensors",
+        "filename": "LIQUIDITY_DEPTH_VERIFY_upswing_champion.safetensors",
+        "bytes": 13536012,
+        "tensor_count": 178,
+        "rank": 16,
+        "alpha": 32.0,
+        "max_tokens": 512,
+        "keccak256_wasm_hash": "0x10f2559265dffb9e2b4557c6122850ac6efbe02b2af0a073daa0bbf29a30ab26",
+        "adapter_hash_no_prefix": "10f2559265dffb9e2b4557c6122850ac6efbe02b2af0a073daa0bbf29a30ab26",
+        "sha256": "4f0e48013df3e80b3a8dcf6e0dfac8a2a1367dfcf13dea6332087ebf29e252cd",
+        "metadata": {
+          "class": "judgment",
+          "intent": "LIQUIDITY_DEPTH_VERIFY",
+          "foundation_hash": "0a49b325304bb4cf292e683929689d0457966be264f60bfc94d0072b614bf8e6",
+          "max_tokens": "512",
+          "format_version": "1",
+          "rank": "16",
+          "alpha": "32",
+          "abi": "lora-v1",
+          "foundation_version": "modernbert-base-lora16-v1",
+          "tokenizer_hash": "67bc76f8b9386efba1a761c1c8e5ad439fd0eaf1c2826e9dd1a205c7af4dc456",
+          "training": "{\"family\":\"LIQUIDITY_DEPTH_VERIFY\",\"trainer\":\"Upswing-Labs-colab-gpu-lora-v1\",\"backbone\":\"answerdotai/ModernBERT-base\",\"backbone_version\":\"modernbert-base-lora16-v1\",\"children\":[{\"intent\":\"LIQUIDITY_DEPTH_VERIFY_GENERAL\",\"dataset_version\":\"upswing-labs-liquidity_depth_verify-600v1\",\"pairs\":600,\"accuracy\":0.9333,\"spearman\":0.4367,\"held_out\":true}]}",
+          "target_modules": "[\"Wi\",\"Wo\",\"Wqkv\"]"
+        }
+      }
+    }
+  }
+}
